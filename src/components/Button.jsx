@@ -1,7 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { keyframes } from 'styled-components'
-import { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 const rotate = keyframes`
     0% {
@@ -12,7 +10,9 @@ const rotate = keyframes`
     }
 `
 
-const StyledButton = styled.button`
+const StyledButton = styled.button.attrs(props => ({
+    outline: true,
+}))`
     padding: 10px 25px;
     font-size: 21px;
     border: none;

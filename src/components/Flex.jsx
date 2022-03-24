@@ -1,15 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledWrapper = styled.div`
+const StyledFlex = styled.div`
     display: flex;
     justify-content: ${props => props.justify || 'stretch'};
     align-items:${props => props.align || 'stretch'};
     flex-direction: ${props => props.direction || 'row'};
+    margin: ${props => props.margin || '0'}
+    width: 100%;
 `
 
-export const Wrapper = (props) => {
+export const Flex = (props) => {
   return (
-    <StyledWrapper {...props}/>
+    <StyledFlex {...props}/>
   )
 }
